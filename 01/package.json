@@ -6,7 +6,7 @@
   "scripts": {
     "start": "ui5 serve"
   },
-  "devDependencies": {
+  "devDependencies": { 
     "@ui5/cli": "^2.0.0"
   }
 }
