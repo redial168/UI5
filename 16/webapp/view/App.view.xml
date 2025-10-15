@@ -1,0 +1,35 @@
+<mvc:View
+   controllerName="sap.ui.demo.walkthrough.controller.App"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc">
+   <Page title="我的待辦事項">
+      <content>
+         <Panel
+            headerText="新增待辦事項"
+            class="sapUiResponsiveMargin"
+            width="auto" >
+            <content>
+               <Input
+                  id="todoInput"
+                  value="{/newItem}"
+                  placeholder="請輸入待辦事項"
+                  class="sapUiSmallMarginEnd"/>
+               <Button
+                  text="新增"
+                  press=".onAddItem"/>
+            </content>
+         </Panel>
+         <List
+            id="todoList"
+            headerText="待辦清單"
+            class="sapUiResponsiveMargin"
+            width="auto"
+            items="{/todos}" >
+            <items>
+               <StandardListItem
+                  title="{text}" />
+            </items>
+         </List>
+      </content>
+   </Page>
+</mvc:View>
