@@ -1,0 +1,33 @@
+{
+  "sap.app": {
+    "id": "E02_BMI",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": { "version": "1.0.0" },
+    "title": "{i18n>appTitle}"
+  },
+  "sap.ui": {
+    "technology": "UI5"
+  },
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "E02_BMI.view.App",
+      "type": "XML",
+      "async": true
+    },
+    "dependencies": {
+      "minUI5Version": "1.60.0",
+      "libs": { "sap.m": {} }
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": { "bundleName": "E02_BMI.i18n.i18n" }
+      },
+      "": {
+        "type": "sap.ui.model.json.JSONModel",
+        "settings": {}
+      }
+    }
+  }
+}

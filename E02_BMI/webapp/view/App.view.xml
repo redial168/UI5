@@ -1,0 +1,64 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="E02_BMI.controller.App" displayBlock="true">
+	<App>
+		<Page title="{i18n>appTitle}">
+			<content>
+				<VBox class="sapUiLargeMargin" width="100%">
+					<HBox alignItems="Center" class="sapUiSmallMarginBottom">
+						<Label text="{i18n>heightLabel}" width="120px" />
+						<Input 
+							value="{/height}" 
+							type="Number" 
+							placeholder="170"
+							width="150px" 
+							class="sapUiSmallMarginLeft"
+						/>
+						<Text text="{i18n>heightUnit}" class="sapUiSmallMarginLeft" />
+					</HBox>
+					<HBox alignItems="Center" class="sapUiSmallMarginBottom">
+						<Label text="{i18n>weightLabel}" width="120px" />
+						<Input 
+							value="{/weight}" 
+							type="Number" 
+							placeholder="70"
+							width="150px" 
+							class="sapUiSmallMarginLeft"
+						/>
+						<Text text="{i18n>weightUnit}" class="sapUiSmallMarginLeft" />
+					</HBox>
+					<HBox class="sapUiSmallMarginBottom">
+						<Button 
+							text="{i18n>calculateBtn}" 
+							type="Accept" 
+							press="onCalculateBMI"
+						/>
+						<Button 
+							text="{i18n>resetBtn}" 
+							type="Reject" 
+							press="onReset"
+							class="sapUiSmallMarginLeft"
+						/>
+					</HBox>
+					<VBox visible="{= !!${/bmi} }">
+						<HBox alignItems="Center" class="sapUiSmallMarginTop">
+							<Label text="{i18n>bmiResult}" />
+							<Text text="{/bmi}" class="sapUiSmallMarginLeft" />
+						</HBox>
+						<HBox alignItems="Center" class="sapUiSmallMarginTop">
+							<Label text="{i18n>categoryLabel}" />
+							<Text 
+								text="{/bmiCategory}" 
+								class="sapUiSmallMarginLeft"
+								state="{= 
+									${/bmiCategory} === '過輕' ? 'Information' : 
+									${/bmiCategory} === '正常' ? 'Success' : 
+									${/bmiCategory} === '過重' ? 'Warning' : 
+									'Error'
+								}"
+							/>
+						</HBox>
+					</VBox>
+				</VBox>
+			</content>
+		</Page>
+	</App>
+</mvc:View>
