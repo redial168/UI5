@@ -1,0 +1,12 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="E01.controller.App" displayBlock="true">
+	<App>
+		<Page title="{i18n>appTitle}">
+			<content>
+				<VBox class="sapUiSmallMargin">
+					<Text text="{i18n>welcomeText}" />
+					<Button text="{i18n>pressMe}" press="onPress" />
+				</VBox>
+			</content>
+		</Page>
+	</App>
+</mvc:View>

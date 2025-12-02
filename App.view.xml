@@ -1,0 +1,41 @@
+<mvc:View
+    controllerName="sap.ui.demo.bmi.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.ui.layout.form"
+    displayBlock="true">
+    <Page title="{i18n>appTitle}">
+        <content>
+            <f:SimpleForm
+                editable="true"
+                layout="ResponsiveGridLayout"
+                labelSpanXL="3"
+                labelSpanL="3"
+                labelSpanM="3"
+                labelSpanS="12"
+                adjustLabelSpan="false"
+                emptySpanXL="4"
+                emptySpanL="4"
+                emptySpanM="4"
+                emptySpanS="0"
+                columnsXL="1"
+                columnsL="1"
+                columnsM="1"
+                singleContainerFullSize="false" >
+                <f:content>
+                    <Label text="{i18n>heightLabel}" />
+                    <Input value="{/height}" type="Number" placeholder="{i18n>placeholderHeight}" />
+                    <Label text="{i18n>weightLabel}" />
+                    <Input value="{/weight}" type="Number" placeholder="{i18n>placeholderWeight}" />
+                    <Label />
+                    <Button text="{i18n>calculateButton}" press=".onCalcBMI" type="Emphasized"/>
+                    <Label text="{i18n>bmiResultLabel}" />
+                    <Text text="{
+                        path: '/bmi',
+                        formatter: '.formatter.formatBMI'
+                    }" class="sapUiSmallMarginTop" />
+                </f:content>
+            </f:SimpleForm>
+        </content>
+    </Page>
+</mvc:View>
