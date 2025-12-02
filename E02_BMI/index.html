@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>BMI 計算器</title>
+	<script id="sap-ui-bootstrap"
+		src="https://ui5.sap.com/resources/sap-ui-core.js"
+		data-sap-ui-theme="sap_fiori_3"
+		data-sap-ui-libs="sap.m"
+		data-sap-ui-compatVersion="edge"
+		data-sap-ui-preload="none"
+		data-sap-ui-resourceroots='{"E02_BMI": "./webapp"}'></script>
+	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%2307a0c3'/%3E%3Ctext x='8' y='11' font-size='9' text-anchor='middle' fill='white'%3EBMI%3C/text%3E%3C/svg%3E">
+	<script>
+		sap.ui.getCore().attachInit(function () {
+			new sap.ui.core.ComponentContainer({
+				name: "E02_BMI",
+				settings: { id: "E02_BMI" },
+				async: true
+			}).placeAt("content");
+		});
+	</script>
+</head>
+<body class="sapUiBody" id="content"></body>
+</html>

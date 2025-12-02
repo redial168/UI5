@@ -1,12 +1,42 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="E01.controller.App" displayBlock="true">
-	<App>
-		<Page title="{i18n>appTitle}">
-			<content>
-				<VBox class="sapUiSmallMargin">
-					<Text text="{i18n>welcomeText}" />
-					<Button text="{i18n>pressMe}" press="onPress" />
-				</VBox>
-			</content>
-		</Page>
-	</App>
+<mvc:View
+    controllerName="sap.ui.demo.bmi.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    displayBlock="true">
+    <Page title="{i18n>appPageTitle}">
+        <content>
+            <l:VerticalLayout
+                class="sapUiContentPadding"
+                width="100%">
+                <Label text="{i18n>heightLabel}" for="heightInput"/>
+                <Input
+                    id="heightInput"
+                    value="{/height}"
+                    type="Number"
+                    placeholder="Enter your height in cm"
+                    width="200px"/>
+                <Label text="{i18n>weightLabel}" for="weightInput"/>
+                <Input
+                    id="weightInput"
+                    value="{/weight}"
+                    type="Number"
+                    placeholder="Enter your weight in kg"
+                    width="200px"/>
+                <Toolbar>
+                    <Button text="{i18n>calculateButton}" press=".onCalculateBMI" type="Emphasized"/>
+                    <Button text="{i18n>clearButton}" press=".onClear" />
+                </Toolbar>
+
+                <Label text="{i18n>bmiResultLabel}" class="sapUiSmallMarginTop"/>
+                <FormattedText
+                    id="bmiResultText"
+                    htmlText="{
+                        parts: ['/bmi', '/bmiStatus'],
+                        formatter: '.formatBmiResult'
+                    }"
+                    class="sapMTitle"/>
+            </l:VerticalLayout>
+        </content>
+    </Page>
 </mvc:View>
