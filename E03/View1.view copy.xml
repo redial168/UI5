@@ -1,0 +1,34 @@
+<mvc:View
+    controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    
+    <Page title="我的數位名片">
+        <content>
+            <VBox class="sapUiSmallMargin" alignItems="Center" justifyContent="Center">
+                
+             <items>   <Avatar 
+                    src="https://sdk.openui5.org/test-resources/sap/ui/documentation/sdk/images/people/img_header_2.png" 
+                    displaySize="L" 
+                    class="sapUiSmallMarginBottom"/>
+
+                <Title text="張小明 (XiaoMing)" level="H1" titleStyle="H2"/>
+                <Text text="SAP UI5 見習顧問" class="sapUiTinyMarginBottom"/>
+                
+                <Panel headerText="關於我" width="300px" class="sapUiMediumMarginTop">
+                    <content>
+                        <Text text="你好！我正在學習 SAP UI5 開發，這是我的第一個練習專案。"/>
+                    </content>
+                </Panel>
+
+                <Button 
+                    text="打個招呼" 
+                    type="Emphasized" 
+                    icon="sap-icon://email" 
+                    class="sapUiMediumMarginTop"
+                    press=".onSayHello"/>
+
+            </items></VBox>
+        </content>
+    </Page>
+</mvc:View>

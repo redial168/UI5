@@ -1,0 +1,12 @@
+<mvc:View
+    controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    
+    <Page title="我的數位名片">
+        <content>
+            <Text text="測試成功！控制器已經連線！" class="sapUiMediumMargin"/>
+            <Button text="點我測試" press=".onSayHello" />
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,12 @@
+<mvc:View
+	controllerName="E04.controller.App"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+
+	<Page title="E04 - UI5 應用">
+		<content>
+			<Text text="歡迎使用 UI5 應用！" class="sapUiMediumMargin"/>
+		</content>
+	</Page>
+
+</mvc:View>
