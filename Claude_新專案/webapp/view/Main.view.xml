@@ -1,0 +1,21 @@
+<mvc:View
+    controllerName="com.mycompany.controller.Main"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Page title="{i18n>appTitle}">
+        <content>
+            <VBox class="sapUiSmallMargin">
+                <Text text="歡迎使用 SAP UI5！" class="sapUiMediumMarginBottom"/>
+                <Input
+                    value="{/recipient/name}"
+                    placeholder="輸入名稱"
+                    width="300px"
+                    class="sapUiSmallMarginBottom"/>
+                <Button
+                    text="問候"
+                    press=".onShowHello"
+                    type="Emphasized"/>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

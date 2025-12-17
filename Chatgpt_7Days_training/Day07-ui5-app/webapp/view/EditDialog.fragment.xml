@@ -1,0 +1,14 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+  <Dialog title="Edit Item">
+    <content>
+      <VBox class="sapUiSmallMargin">
+        <Text text="Item name" />
+        <Input value="{app>name}" placeholder="Item name" />
+        <Text text="ID: {app>id}" />
+      </VBox>
+    </content>
+    <beginButton>
+      <Button text="OK" press=".onCloseDialog" />
+    </beginButton>
+  </Dialog>
+</core:FragmentDefinition>

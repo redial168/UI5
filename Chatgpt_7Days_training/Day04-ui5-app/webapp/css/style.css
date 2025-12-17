@@ -1,0 +1,4 @@
+/* Day 1: add a visible style so you know CSS is loaded */
+.sapMPage .sapMPageSection {
+  padding: 1rem;
+}

@@ -1,0 +1,12 @@
+<mvc:View
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  controllerName="com.mycompany.myui5app.controller.Detail"
+>
+  <Page title="Detail" showNavButton="true" navButtonPress=".onNavBack">
+    <content>
+      <ObjectHeader title="{app>name}" number="ID {app>id}" />
+      <Text text="This page is bound to the selected item via routing." />
+    </content>
+  </Page>
+</mvc:View>

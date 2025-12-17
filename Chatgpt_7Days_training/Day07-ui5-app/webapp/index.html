@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My UI5 App</title>
+
+    <script
+      id="sap-ui-bootstrap"
+      src="resources/sap-ui-core.js"
+      data-sap-ui-theme="sap_horizon"
+      data-sap-ui-async="true"
+      data-sap-ui-libs="sap.m"
+      data-sap-ui-compatVersion="edge"
+      data-sap-ui-resourceRoots='{
+        "com.mycompany.myui5app": "./"
+      }'
+      data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
+    ></script>
+  </head>
+
+  <body class="sapUiBody sapUiSizeCompact">
+    <div
+      data-sap-ui-component
+      data-name="com.mycompany.myui5app"
+      data-id="container"
+      data-settings='{"id":"myui5app"}'
+    ></div>
+  </body>
+</html>

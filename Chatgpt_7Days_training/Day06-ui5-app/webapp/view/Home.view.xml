@@ -1,0 +1,13 @@
+<mvc:View
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  controllerName="com.mycompany.myui5app.controller.Home"
+>
+  <Page title="{i18n>appTitle}">
+    <content>
+      <List items="{app>/items}" itemPress=".onItemPress">
+        <StandardListItem title="{app>name}" description="ID: {app>id}" type="Active" />
+      </List>
+    </content>
+  </Page>
+</mvc:View>

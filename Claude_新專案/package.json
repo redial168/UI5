@@ -1,0 +1,12 @@
+{
+  "name": "myui5app",
+  "version": "1.0.0",
+  "description": "SAP UI5 Application",
+  "scripts": {
+    "start": "ui5 serve -o index.html",
+    "build": "ui5 build --all"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^3.0.0"
+  }
+}

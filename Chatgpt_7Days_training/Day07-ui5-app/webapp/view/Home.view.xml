@@ -1,0 +1,42 @@
+<mvc:View
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  controllerName="com.mycompany.myui5app.controller.Home"
+>
+  <Page title="{i18n>appTitle}">
+    <content>
+      <Toolbar>
+        <Title text="Mini CRUD (JSONModel + localStorage)" level="H2"/>
+        <ToolbarSpacer/>
+      </Toolbar>
+
+      <VBox class="sapUiSmallMargin">
+        <HBox>
+          <Input
+            width="100%"
+            value="{app>/newItemName}"
+            placeholder="New item name"
+            submit=".onAddItem"
+          />
+          <Button text="Add" press=".onAddItem" />
+        </HBox>
+      </VBox>
+
+      <List items="{app>/items}" mode="Delete" delete=".onDeleteItem">
+        <CustomListItem>
+          <HBox width="100%" justifyContent="SpaceBetween" alignItems="Center">
+            <VBox>
+              <Text text="{app>name}" />
+              <Text text="ID: {app>id}" design="Bold" />
+            </VBox>
+
+            <HBox>
+              <Button text="View" type="Transparent" press=".onViewPress" />
+              <Button text="Edit" type="Transparent" press=".onEditPress" />
+            </HBox>
+          </HBox>
+        </CustomListItem>
+      </List>
+    </content>
+  </Page>
+</mvc:View>
