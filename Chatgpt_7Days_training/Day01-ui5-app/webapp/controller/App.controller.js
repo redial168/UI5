@@ -11,6 +11,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller", "sap/m/MessageToast"], function (
 
     onPress: function () {
       MessageToast.show("Day 1: Button pressed!");
+      console.log("Button was pressed");
     }
   });
 });
