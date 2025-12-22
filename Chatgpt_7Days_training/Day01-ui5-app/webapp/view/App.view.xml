@@ -1,11 +1,11 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m" controllerName="com.mycompany.myui5app.controller.App">
     <Page title="{i18n>appTitle}">
-        <HBox class="mySection">
+        <!--   <HBox class="mySection"> -->
 
-            <Text text="{i18n>helloMsg}" class="myPage" />
-            <Button text="{i18n>btnClickMe}" press=".onPress" />
-        </HBox>
+        <Text text="{i18n>helloMsg}" class="myPage" />
+        <Button text="{i18n>btnClickMe}" class="myPage" press=".onPress" />
+        <!--   </HBox> -->
         <!--
     <content>
       <Text text="{i18n>helloMsg}" />
