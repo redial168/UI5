@@ -22,7 +22,7 @@ sap.ui.define(
         if (!this._pDialog) {
           this._pDialog = Fragment.load({
             name: "com.mycompany.myui5app.view.EditDialog",
-            Controller: this
+            controller: this
           }).then((oDialog) => {
             this.getView().addDependent(oDialog);
             return oDialog;
@@ -32,7 +32,8 @@ sap.ui.define(
         const oDialog = await this._pDialog;
         oDialog.bindElement({ path: sPath, model: "app" });
         oDialog.open();
-        MessageToast.show("Editing...." + oCtx.getObject().name);
+
+        MessageToast.show("Editing: " + oCtx.getObject().name);
       },
 
       onCloseDialog: async function () {

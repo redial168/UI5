@@ -1,14 +1,15 @@
-<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+<core:FragmentDefinition xmlns="sap.m"
+  xmlns:core="sap.ui.core">
   <Dialog title="Edit Item">
     <content>
       <VBox class="sapUiSmallMargin">
-        <Text text="Edit name (TwoWay binding)" />
-        <Input value="{app>name}" placeholder="Item name" />
-        <Text text="ID: {app>id}" />
+        <Text text="Edit name (TwoWay binding)"/>
+        <Input value="{app>name}" placeholder="Item name"/>
+        <Text text="ID: {app>id}"/>
       </VBox>
     </content>
-    <beginButton>
-      <Button text="OK" press=".onCloseDialog" />
-    </beginButton>
+
+    <Button text="OK!" press=".onCloseDialog" />
+
   </Dialog>
 </core:FragmentDefinition>
