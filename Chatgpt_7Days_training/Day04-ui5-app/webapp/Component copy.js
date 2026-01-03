@@ -12,11 +12,14 @@ sap.ui.define(["sap/ui/core/UIComponent", "sap/ui/model/json/JSONModel"], functi
 
       const oModel = new JSONModel({
         user: { name: "Joyce" },
-        counter: 0
+        counter: 0,
+        items: [
+          { id: 1, name: "Apple" },
+          { id: 2, name: "Banana" },
+          { id: 3, name: "Cherry" }
+        ]
       });
-
       this.setModel(oModel, "app");
-
     }
   });
 });

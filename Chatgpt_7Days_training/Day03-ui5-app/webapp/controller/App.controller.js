@@ -7,9 +7,17 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
     },
 
     onAdd: function () {
+
       const oModel = this.getOwnerComponent().getModel("app");
-      const i = oModel.getProperty("/counter");
-      oModel.setProperty("/counter", i + 1);
+      let i = oModel.getProperty("/counter");
+      console.log("Current counter value1:", i);
+      i = i + 1;
+      console.log("Current counter value2:", i);
+      oModel.setProperty("/counter", i);
+      console.log("Current counter value3:", i);
+
     }
+
+
   });
 });

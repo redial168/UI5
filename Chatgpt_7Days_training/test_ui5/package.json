@@ -1,0 +1,11 @@
+{
+  "name": "test-ui5-app",
+  "version": "1.0.0",
+  "description": "A simple UI5 Hello World app",
+  "scripts": {
+    "start": "ui5 serve -o index.html"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^3.0.0"
+  }
+}

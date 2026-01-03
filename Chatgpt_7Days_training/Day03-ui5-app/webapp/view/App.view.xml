@@ -1,12 +1,9 @@
-<mvc:View
-  xmlns:mvc="sap.ui.core.mvc"
-  xmlns="sap.m"
-  controllerName="com.mycompany.myui5app.controller.App"
->
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m" controllerName="com.mycompany.myui5app.controller.App">
   <Page title="{i18n>appTitle}">
     <content>
-      <Text text="Hi, {app>/user/name}" />
-      <Text text="Counter: {app>/counter}" />
+      <Text text="Hi, {app>/user/name}" class="sapUiSmallMarginBottom" />
+      <Text text="Counter: {app>/counter}" class="sapUiSmallMarginBottom" />
       <Button text="{i18n>btnAdd}" press=".onAdd" />
     </content>
   </Page>

@@ -9,10 +9,10 @@
       <Toolbar>
         <Title text="Items" level="H2"/>
       </Toolbar>
-
       <List items="{app>/items}" itemPress=".onItemPress">
         <StandardListItem title="{app>name}" description="ID: {app>id}" type="Active" />
       </List>
+
     </content>
   </Page>
 </mvc:View>

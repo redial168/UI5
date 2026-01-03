@@ -10,6 +10,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller", "sap/m/MessageToast"], function (
     },
 
     onPress: function () {
+
       MessageToast.show("Day 2: Binding is working ✅");
     }
   });

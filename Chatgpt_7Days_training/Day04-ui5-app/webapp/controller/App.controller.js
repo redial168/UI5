@@ -19,7 +19,11 @@ sap.ui.define(["sap/ui/core/mvc/Controller", "sap/m/MessageToast"], function (
       const oItem = oEvent.getParameter("listItem");
       const oCtx = oItem.getBindingContext("app");
       const oData = oCtx.getObject();
-      MessageToast.show("You clicked: " + oData.name);
+
+      sap.m.MessageToast.show("You pressed " + oData.name);
+
     }
+
+
   });
 });
